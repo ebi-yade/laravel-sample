@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Author extends Model
 {
-    public function author(): BelongsTo
-    {
-        return $this->belongsTo('App\Models\Author');
-    }
+    protected $fillable = [
+        'name'
+    ];
 }

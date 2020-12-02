@@ -3,13 +3,13 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Author as EloquentAuthor;
-use App\Repositories\AuthorRepository;
+use App\Repositories\AuthorRepository as IAuthorRepository;
 use App\Entities\Author;
 
 /**
  * {@inheritdoc}
  */
-class EloquentAuthorRepository implements AuthorRepository
+class AuthorRepository implements IAuthorRepository
 {
     private EloquentAuthor $eloquentAuthor;
 

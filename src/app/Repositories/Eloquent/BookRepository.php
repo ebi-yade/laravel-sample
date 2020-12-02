@@ -3,13 +3,13 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Book as EloquentBook;
-use App\Repositories\BookRepository;
+use App\Repositories\BookRepository as IBookRepository;
 use App\Entities\Book;
 
 /**
  * {@inheritdoc}
  */
-class EloquentBookRepository implements BookRepository
+class BookRepository implements IBookRepository
 {
     private EloquentBook $eloquentBook;
 
