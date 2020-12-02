@@ -9,10 +9,7 @@ use App\Usecases\AuthorNotFoundException;
 
 class BookController extends Controller
 {
-    /**
-     * @var BookUsecase
-     */
-    private $bookUsecase;
+    private BookUsecase $bookUsecase;
 
     public function __construct(BookUsecase $bookUsecase)
     {
@@ -36,7 +33,7 @@ class BookController extends Controller
     {
         $authorId = $request->input('author_id');
         $title = $request->input('title');
-
+    
         try {
             $book = $this->bookUsecase->createBook($authorId, $title);
         } catch (AuthorNotFoundException $e) {

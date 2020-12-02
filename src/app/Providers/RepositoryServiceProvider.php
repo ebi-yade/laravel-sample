@@ -22,11 +22,11 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         $this->app->bind(
             \App\Repositories\BookRepository::class,
-            \App\Repositories\Eloquent\EloquentBookRepository::class
+            \App\Repositories\Eloquent\BookRepository::class
         );
         $this->app->bind(
             \App\Repositories\AuthorRepository::class,
-            \App\Repositories\Eloquent\EloquentAuthorRepository::class
+            \App\Repositories\Eloquent\AuthorRepository::class
         );
     }
 

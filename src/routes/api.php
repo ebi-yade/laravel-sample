@@ -18,7 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// サンプルAPI
-Route::get('/shops', 'ShopController@listShop')->name('shops');
-Route::post('/shops', 'ShopController@createShop')->name('shops.create');
-Route::get('/shops/{id}', 'ShopController@detailShop')->name('shops.detail');
+Route::get('/books', 'BookController@createBook');
+Route::post('/books', 'BookController@createBook');
