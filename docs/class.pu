@@ -1,0 +1,29 @@
+@startuml class
+hide Method
+hide Field
+
+package Domain {
+    class BookUsecase
+    class BookRepository
+    class AuthorRepository
+    class Book
+    class Author
+}
+
+package Infrastructure {
+    class BookController
+    class EloquentAuthorRepository
+    class EloquentBookRepository
+}
+
+BookUsecase --|> BookRepository
+BookRepository --|> Book
+BookUsecase --|> Book
+BookUsecase --|> AuthorRepository
+AuthorRepository --|> Author
+
+
+BookController --|> BookUsecase
+EloquentBookRepository --|> BookRepository
+EloquentAuthorRepository --|> AuthorRepository
+@enduml

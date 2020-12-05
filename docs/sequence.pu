@@ -1,0 +1,27 @@
+@startuml sequence
+actor user
+participant BookController
+participant BookUsecase
+participant AuthorRepository
+participant BookRepository
+
+user -> BookController: POST /books
+BookController -> BookController: 必須パラメータチェック
+alt 必須パラメータが存在しない
+    BookController -> user: 400 Bad Request
+end
+BookController -> BookUsecase: 本の作成処理
+BookUsecase -> AuthorRepository: 著者IDから著者を取得
+alt 著者が存在しない
+    AuthorRepository -> BookUsecase: Return null
+    BookUsecase -> BookController: Not Found Exception
+    BookController -> user: 404 Not Found
+end
+
+AuthorRepository -> BookUsecase: 著者情報
+BookUsecase -> BookUsecase: 本のオブジェクトを作成
+BookUsecase -> BookRepository: 本の新規作成(保存)
+BookRepository -> BookUsecase: 保存された本情報
+BookUsecase -> BookController: 保存された本情報
+BookController -> user: 200 OK & JSONレスポンス
+@enduml
