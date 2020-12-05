@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Domain\Repositories;
 
-use App\Entities\Book;
+use App\Domain\Entities\Book;
 
 interface BookRepository
 {

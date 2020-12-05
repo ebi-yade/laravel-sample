@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repositories\Eloquent;
+namespace App\Eloquent;
 
 use App\Models\Book as EloquentBook;
-use App\Repositories\BookRepository as IBookRepository;
-use App\Entities\Book;
+use App\Domain\Repositories\BookRepository as IBookRepository;
+use App\Domain\Entities\Book;
 
 /**
  * {@inheritdoc}

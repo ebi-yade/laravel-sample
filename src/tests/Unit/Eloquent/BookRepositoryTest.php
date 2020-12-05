@@ -5,8 +5,8 @@ namespace Tests\Unit\Repositories\Eloquent;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\Models\Book as EloquentBook;
-use App\Repositories\Eloquent\BookRepository;
-use App\Entities\Book;
+use App\Eloquent\BookRepository;
+use App\Domain\Entities\Book;
 
 class BookRepositoryTest extends TestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Usecases;
+namespace App\Domain\Usecases;
 
-use App\Repositories\AuthorRepository;
-use App\Repositories\BookRepository;
-use App\Entities\Book;
+use App\Domain\Repositories\AuthorRepository;
+use App\Domain\Repositories\BookRepository;
+use App\Domain\Entities\Book;
 use Exception;
 
 class AuthorNotFoundException extends Exception {}

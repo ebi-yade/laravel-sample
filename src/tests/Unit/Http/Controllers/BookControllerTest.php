@@ -3,8 +3,8 @@
 namespace Tests\Controllers;
 
 use Tests\TestCase;
-use App\Usecases\{BookUsecase,AuthorNotFoundException};
-use App\Entities\Book;
+use App\Domain\Usecases\{BookUsecase,AuthorNotFoundException};
+use App\Domain\Entities\Book;
 use Mockery;
 
 class BookControllerTest extends TestCase

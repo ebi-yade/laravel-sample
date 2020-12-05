@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Domain\Repositories;
 
-use App\Entities\Author;
+use App\Domain\Entities\Author;
 
 interface AuthorRepository
 {

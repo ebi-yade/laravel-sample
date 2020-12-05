@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repositories\Eloquent;
+namespace App\Eloquent;
 
 use App\Models\Author as EloquentAuthor;
-use App\Repositories\AuthorRepository as IAuthorRepository;
-use App\Entities\Author;
+use App\Domain\Repositories\AuthorRepository as IAuthorRepository;
+use App\Domain\Entities\Author;
 
 /**
  * {@inheritdoc}

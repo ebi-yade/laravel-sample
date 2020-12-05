@@ -21,12 +21,12 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            \App\Repositories\BookRepository::class,
-            \App\Repositories\Eloquent\BookRepository::class
+            \App\Domain\Repositories\BookRepository::class,
+            \App\Eloquent\BookRepository::class
         );
         $this->app->bind(
-            \App\Repositories\AuthorRepository::class,
-            \App\Repositories\Eloquent\AuthorRepository::class
+            \App\Domain\Repositories\AuthorRepository::class,
+            \App\Eloquent\AuthorRepository::class
         );
     }
 

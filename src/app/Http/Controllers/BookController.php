@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Response;
 use App\Http\Requests\CreateBookRequest;
-use App\Usecases\BookUsecase;
-use App\Usecases\AuthorNotFoundException;
+use App\Domain\Usecases\BookUsecase;
+use App\Domain\Usecases\AuthorNotFoundException;
 
 class BookController extends Controller
 {
@@ -17,14 +17,7 @@ class BookController extends Controller
     }
 
     /**
-     * @group Book
      * 本を作成
-     * 
-     * @response {
-     *   "id": 10,
-     *   "author_id": 20,
-     *   "title": "PHP入門",
-     * }
      * 
      * @param CreateBookRequest $request
      * @return array<string,string|int>

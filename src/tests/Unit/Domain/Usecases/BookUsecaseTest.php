@@ -4,9 +4,18 @@ namespace Tests\Unit\Usecases;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use App\Usecases\{BookUsecase, AuthorNotFoundException};
-use App\Repositories\{AuthorRepository,BookRepository};
-use App\Entities\{Book,Author};
+use App\Domain\Usecases\{
+    BookUsecase,
+    AuthorNotFoundException
+};
+use App\Domain\Repositories\{
+    AuthorRepository,
+    BookRepository
+};
+use App\Domain\Entities\{
+    Book,
+    Author
+};
 use Hamcrest\Matchers;
 use Mockery;
 

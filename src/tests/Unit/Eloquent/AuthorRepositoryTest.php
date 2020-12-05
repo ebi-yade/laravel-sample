@@ -5,8 +5,8 @@ namespace Tests\Unit\Repositories\Eloquent;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\Models\Author as EloquentAuthor;
-use App\Repositories\Eloquent\AuthorRepository;
-use App\Entities\Author;
+use App\Eloquent\AuthorRepository;
+use App\Domain\Entities\Author;
 
 class AuthorRepositoryTest extends TestCase
 {
